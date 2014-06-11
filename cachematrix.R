@@ -18,7 +18,8 @@
 ##   getInv() - returns the cached inverse of the matrix
 ##
 
-## Write a short comment describing this function
+## Construct a CacheMatrix from the square invertable matrix x.  It is the callers'
+## responsibility to ensure that x is square and invertable.
 
 makeCacheMatrix <- function(x = matrix()) {
   invCache <- NULL
@@ -34,7 +35,9 @@ makeCacheMatrix <- function(x = matrix()) {
        getInv = getInv)
 }
 
-## Write a short comment describing this function
+## Returns the inverse of the invertable square matrix x and caches the inverse in
+## the CacheMatrix.  If previously cached, the cached inverse is returned without
+## recalculating the inverse.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
